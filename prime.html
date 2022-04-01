@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon PrimeVideo</title>
+    <link rel="stylesheet" href="./style.css/prime.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/c255e6aec1.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="navbar">
+      <a href="#" class="menu-bars" id="show-menu">
+        <i class="fas fa-bars nav-icon"></i>
+      </a>
+      <a href="#"
+        ><h1>
+          <i class="amazon1.png"></i>Prime Video<sup>IN</sup>
+        </h1></a
+      >
+      <div id="nav-search-div">
+        <input type="text" id="query" /><button onclick="findVideos()">
+          <i class="fas fa-search"></i>
+        </button>
+
+        <a href="#"><i class="fas fa-microphone nav-icon"></i></a>
+      </div>
+      <div id="nav-user-div">
+        <a href="#"><i class="fas fa-video nav-icon"></i></a>
+        <a href="#"><i class="fas fa-th nav-icon"></i></a>
+        <a href="#"><i class="fas fa-bell nav-icon"></i></a>
+        <a href="#"><i class="fas fa-user nav-icon"></i></a>
+      </div>
+    </div>
+    <nav id="nav-menu">
+      <ul class="nav-menu-items">
+        <div id="navbar-toggle">
+          <a href="#" class="menu-bars" id="hide-menu">
+            <i class="fas fa-bars nav-icon"></i>
+          </a>
+          <a href="#"
+            ><h1>
+              </i>prime Video<sup
+                >IN</sup
+              >
+            </h1></a
+          >
+        </div>
+        <hr />
+        <div class="nav-section">
+          <li class="nav-text">
+            <a href="#"><i class="fas fa-home nav-icon"></i>Home</a>
+          </li>
+          <li class="nav-text">
+            <a href="#"><i class="fas fa-compass nav-icon"></i>Explore</a>
+          </li>
+          <li class="nav-text">
+            <a href="#"
+              ><i class="fab fa-youtube-square nav-icon"></i>Subscriptions</a
+            >
+          </li>
+        </div>
+        <hr />
+        <div class="nav-section">
+          <li class="nav-text">
+            <a href="#"><i class="fas fa-photo-video nav-icon"></i>Library</a>
+          </li>
+          <li class="nav-text">
+            <a href="#"><i class="fas fa-history nav-icon"></i>History</a>
+          </li>
+          <li class="nav-text">
+            <a href="#"
+              ><i class="far fa-play-circle nav-icon"></i>Your videos</a
+            >
+          </li>
+          <li class="nav-text">
+            <a href="#"><i class="fas fa-clock nav-icon"></i>Watch later</a>
+          </li>
+          <li class="nav-text">
+            <a href="#"
+              ><i class="fas fa-thumbs-up nav-icon"></i>Liked videos</a
+            >
+          </li>
+        </div>
+        <hr />
+      </ul>
+    </nav>
+    <div id="videos"></div>
+  </body>
+  <script src="./scripts/prime.js"></script>
+</html>

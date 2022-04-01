@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Sephora - verify your purchase</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: rgb(202,224,230);
+            background: linear-gradient(87deg, rgba(202,224,230,1) 0%, rgba(214,237,250,1) 99%);
+            font-family: 'Dongle', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .card {
+            font-size: 24px;
+        }
+
+        .card h6 {
+            color: #003959;
+            font-size: 40px;
+            line-height: 40px;
+        }
+
+        .inputs input {
+            margin: 2px;
+            width: 40px;
+            height: 40px;
+	    font-size: 24px;
+            border-radius: 5px;
+            border-color: white;
+            text-align: center;
+        }
+
+        #resend-link {
+            text-decoration: none;
+        }
+
+        .btn {
+	    border: 0;
+            padding: 10px 20px;
+            margin: 20px;
+            border-radius: 20px;
+            border-color: white;
+            color: #efefef;
+            font-size: 24px;
+            background-color: tomato;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="">
+            <div class="card">
+                <h6>Please enter the one time password <br> to complete your Subscription</h6>
+                <div> <span>A code has been sent to</span> <small>******2470</small> </div>
+                <div id="otp" class="inputs">
+                    <input class="" type="text" id="first" maxlength="1" />
+                    <input class="" type="text" id="second" maxlength="1" /> 
+                    <input class="" type="text" id="third" maxlength="1" /> 
+                    <input class="" type="text" id="fourth" maxlength="1" /> 
+                    <input class="" type="text" id="fifth" maxlength="1" /> 
+                    <input class="" type="text" id="sixth" maxlength="1" />
+                </div>
+
+                <div class="">
+                    <button class="btn" id="validate">Validate</button>
+                </div>
+
+                <div class="">
+                    <div id="resend-otp">
+                        <span>Didn't get the code</span>
+                        <a href="#" id="resend-link">Resend(1/3)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<script>
+    var resendLink = document.querySelector('#resend-link');
+    function resendOTP(e) {
+        e.preventDefault();
+        var numResends = resendLink.innerText[7];
+        if (numResends < 3) {
+            numResends++;
+            resendLink.innerText = 'Resend('+numResends+'/3)';
+        } else {
+            var resendOtp = document.querySelector('#resend-otp');
+            resendOtp.textContent = "You've used up all your retries. Please try again later";
+            resendOtp.style.color = 'red';
+        }
+    }
+    resendLink.addEventListener('click', resendOTP);
+
+    function validate(e) {
+        e.preventDefault();
+        a = document.querySelector('#first').value == 1;
+        b = document.querySelector('#second').value == 7;
+        c = document.querySelector('#third').value == 4;
+        d = document.querySelector('#fourth').value == 3;
+        e = document.querySelector('#fifth').value == 6;
+        f = document.querySelector('#sixth').value == 5;
+        if (a && b && c && d && e && f) {
+            window.location.href = 'success.html';
+        } else {
+            alert('WRONG OTP!');
+        }
+    }
+    document.querySelector('#validate').addEventListener('click', validate);
+</script>
