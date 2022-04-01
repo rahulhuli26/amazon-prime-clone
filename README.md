@@ -7,7 +7,7 @@ I have made a clone of the website primevideo.com. prime video is a primarily Am
 
 #### Links
 
-
+Netlify Link : https://sprightly-snickerdoodle-67cb7a.netlify.app
 Deployment: https://github.com/rahulhuli26/amazon-prime-clone.git
 Blog in medium : https://medium.com/@rahulhulikoppe38/amazon-prime-video-71ce281e55f0
 Video : https://drive.google.com/file/d/10brLbzYLCfYdd526gTlwu9G3Kr5WfkyE/view?usp=sharing
